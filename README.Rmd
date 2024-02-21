@@ -7,9 +7,34 @@ output: github_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(classdata)
 ```
 
 # Lab report #1
+
+## Question 1: 
+```{r}
+str(ames)
+?ames
+```
+  The variables are:  
+  - Parcel ID: a chr variable that is a character ID number.  
+  - Address: a chr variable that holds the property address in Ames, IA  
+  - Style: factor variable detailing the type of housing  
+  - Occupancy: factor variable of the type of housing  
+  - Sale Date: date in chr format that is the date of house sale  
+  - Sale Price: a numerical variable that holds the sales price (in US dollar)  
+  - Multi Sale: a chr that is a value if the sale was part of a package and null if not  
+  - YearBuilt: an integer variable that hold the year that the house was built  
+  - Acres: a numerical variable that holds the acres of the lot that the house is built on  
+  - TotalLivingArea: a numerical variable of the total living are in square feet  
+  - Bedrooms: a numerical variable that tells the number of bedrooms  
+  - FinishedBsmtArea: a numerical value that tells the total area of the finished basement in square feet and is null if the basement is not finished  
+  - LotArea: a numerical variable that is the total lot area in square feet  
+  - AC: a chr variable that is either "Yes" or "No" depending on if the property has AC or not  
+  - FirePlace:  a chr variable that is either "Yes" or "No" depending on if the property has a fireplace or not  
+  - Neighborhood: a factor variable, where the levels indicate neighborhood are in Ames  
+
 
 Follow the instructions posted at https://ds202-at-isu.github.io/labs.html for the lab assignment. The work is meant to be finished during the lab time, but you have time until Monday evening to polish things.
 
