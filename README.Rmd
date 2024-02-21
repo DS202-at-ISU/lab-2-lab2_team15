@@ -79,12 +79,23 @@ ggplot(ames, aes(x = ames$`FinishedBsmtArea (sf)`, y = ames$`Sale Price`)) + yli
 
 In comparing the finished basement area to the sales price, there is a pretty clear pattern that generally the larger the finished basement, the larger the sales price is. There are a decent amount of outliers, such as houses that sold for very little cost but with a finished basement are of roughly 2000, or houses that sold for an extremely high cost with a finished basement of 2000 as well. This also reflects the oddities found in question 3 as there are also many values in this scatter plot that indicate a finished basement in a house that sold for no cost.  
 
+### Logan Becker - Bedrooms
 
-
-
-
-
-
+Range of the variable: 
+```{r}
+summary(ames$`Acres`)
+```
+Plot the variable as a histogram: Most of the data is between 0 and 1.25 but there are many outliers.
+```{r}
+<<<<<<< HEAD
+=======
+ggplot(ames, aes(x = ames$`FinishedBsmtArea (sf)`, y = ames$`Sale Price`)) + ylim(0, 1300000) + geom_point()
+```  
+Plot scatterplot: There doesn't seem to be much correlation here, the slope seems to be 0 so we do not see any correlation between the number of acres and the sales price. Again there is also a lot of 0 values which could be affecting the slope and scatterplot overall, which is alike to the oddities in question 3.
+```{r}
+ggplot(ames, aes(x = Acres, y =`Sale Price`)) +
+  geom_point()
+```
 
 
 
