@@ -66,6 +66,16 @@ ggplot(ames, aes( x=`Sale Price`)) + geom_histogram(binwidth = 10000000)
 ## Question 4:
 
 ### Emily Maruska - Finished Basement Area
+```{r}
+summary(ames$`FinishedBsmtArea (sf)`)
+ggplot(ames, aes(x = ames$`FinishedBsmtArea (sf)`)) + geom_histogram()
+```
+There is a distinct pattern in the histogram that shows that most of the houses that have a finished basement have a basement area that is roughly around 1000 square feet. There are, however, a few houses that have extremely large basements in comparison.
+```{r}
+ggplot(ames, aes(x = ames$`FinishedBsmtArea (sf)`, y = ames$`Sale Price`)) + ylim(0, 1300000) + geom_point()
+```  
+
+In comparing the finished basement area to the sales price, there is a pretty clear pattern that generally the larger the finished basement, the larger the sales price is. There are a decent amount of outliers, such as houses that sold for very little cost but with a finished basement are of roughly 2000, or houses that sold for an extremely high cost with a finished basement of 2000 as well. This also reflects the oddities found in question 3 as there are also many values in this scatter plot that indicate a finished basement in a house that sold for no cost.  
 
 Follow the instructions posted at <https://ds202-at-isu.github.io/labs.html> for the lab assignment. The work is meant to be finished during the lab time, but you have time until Monday evening to polish things.
 
