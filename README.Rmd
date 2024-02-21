@@ -42,7 +42,7 @@ The variables are:\
 
 A variable that seems the most important is "sale Price". When drawing conclusions from this data, the most useful application I believe would be predicting prices of homes with this variable. So it makes sense for Sale Price to be our main variable.(Andrew)
 
-Question 3 (Vanessa):
+## Question 3 (Vanessa):
 
 ```{r}
 library(classdata)
@@ -61,6 +61,29 @@ Histogram: There is something odd about the histogram, as it appears to show sal
 library(ggplot2)
 ggplot(ames, aes( x=`Sale Price`)) + geom_histogram(binwidth = 10000000)
 ```
+
+
+<<<<<<< HEAD
+=======
+## Question 4:
+
+### Emily Maruska - Finished Basement Area
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Follow the instructions posted at <https://ds202-at-isu.github.io/labs.html> for the lab assignment. The work is meant to be finished during the lab time, but you have time until Monday evening to polish things.

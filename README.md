@@ -3,6 +3,11 @@
 
 # Lab report \#1
 
+<<<<<<< HEAD
+=======
+# \<\<\<\<\<\<\< HEAD
+
+>>>>>>> f0ed776e24ff50bdcd248d393dd8152cdcdc7c0e
 ## Question 1:
 
 ``` r
@@ -62,6 +67,46 @@ the property has a fireplace or not
 - Neighborhood: a factor variable, where the levels indicate
 neighborhood are in Ames
 
+<<<<<<< HEAD
+=======
+## Question 2
+
+A variable that seems the most important is “sale Price”. When drawing
+conclusions from this data, the most useful application I believe would
+be predicting prices of homes with this variable. So it makes sense for
+Sale Price to be our main variable.(Andrew)
+
+## Question 3 (Vanessa):
+
+``` r
+library(classdata)
+View(ames)
+```
+
+Range of the Variable:
+
+``` r
+summary(ames$`Sale Price`)
+```
+
+    ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    ##        0        0   170900  1017479   280000 20500000
+
+Histogram: There is something odd about the histogram, as it appears to
+show sale prices of 0s.
+
+``` r
+library(ggplot2)
+ggplot(ames, aes( x=`Sale Price`)) + geom_histogram(binwidth = 10000000)
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+## Question 4:
+
+### Emily Maruska - Finished Basement Area
+
+>>>>>>> f0ed776e24ff50bdcd248d393dd8152cdcdc7c0e
 Follow the instructions posted at
 <https://ds202-at-isu.github.io/labs.html> for the lab assignment. The
 work is meant to be finished during the lab time, but you have time
