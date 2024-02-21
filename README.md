@@ -3,10 +3,7 @@
 
 # Lab report \#1
 
-<<<<<<< HEAD
-=======
 # \<\<\<\<\<\<\< HEAD
-
 
 ## Question 1:
 
@@ -67,8 +64,6 @@ the property has a fireplace or not
 - Neighborhood: a factor variable, where the levels indicate
 neighborhood are in Ames
 
-<<<<<<< HEAD
-=======
 ## Question 2
 
 A variable that seems the most important is “sale Price”. When drawing
@@ -106,9 +101,6 @@ ggplot(ames, aes( x=`Sale Price`)) + geom_histogram(binwidth = 10000000)
 
 ### Emily Maruska - Finished Basement Area
 
-<<<<<<< HEAD
->>>>>>> f0ed776e24ff50bdcd248d393dd8152cdcdc7c0e
-=======
 ``` r
 summary(ames$`FinishedBsmtArea (sf)`)
 ```
@@ -157,7 +149,124 @@ oddities found in question 3 as there are also many values in this
 scatter plot that indicate a finished basement in a house that sold for
 no cost.
 
+### Logan Becker - Bedrooms
 
+Range of the variable:
+
+``` r
+summary(ames$`Acres`)
+```
+
+    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    ##  0.0000  0.1502  0.2200  0.2631  0.2770 12.0120      89
+
+Plot the variable as a histogram: Most of the data is between 0 and 1.25
+but there are many outliers.
+
+``` r
+ggplot(ames, aes(x = ames$`FinishedBsmtArea (sf)`, y = ames$`Sale Price`)) + ylim(0, 1300000) + geom_point()
+```
+
+    ## Warning: Use of `` ames$`FinishedBsmtArea (sf)` `` is discouraged.
+    ## ℹ Use `FinishedBsmtArea (sf)` instead.
+
+    ## Warning: Use of `` ames$`Sale Price` `` is discouraged.
+    ## ℹ Use `Sale Price` instead.
+
+    ## Warning: Removed 2682 rows containing missing values (`geom_point()`).
+
+![](README_files/figure-gfm/unnamed-chunk-8-1.png)<!-- --> Plot
+scatterplot: There doesn’t seem to be much correlation here, the slope
+seems to be 0 so we do not see any correlation between the number of
+acres and the sales price. Again there is also a lot of 0 values which
+could be affecting the slope and scatterplot overall, which is alike to
+the oddities in question 3.
+
+``` r
+ggplot(ames, aes(x = Acres, y =`Sale Price`)) +
+  geom_point()
+```
+
+    ## Warning: Removed 89 rows containing missing values (`geom_point()`).
+
+![](README_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+
+### Vanessa Ramirez - Lot Area (sf)
+
+Range: Min: 0 and Max: 523228
+
+``` r
+summary(ames$`LotArea(sf)`)
+```
+
+    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    ##       0    6553    9575   11466   12088  523228      89
+
+Scatterplot: There is no relationship between sales price and lot
+area.It seems that both the lot area and sale price are recorded as 0,
+which is why most of the points are clustered together in the bottom
+left corner.
+
+``` r
+ggplot(data = ames) + geom_point(mapping = aes(x = `LotArea(sf)`, 
+                                               y = `Sale Price`)) + 
+  labs(x = "Lot Area (sf)" , 
+       y = " Sale Price")
+```
+
+    ## Warning: Removed 89 rows containing missing values (`geom_point()`).
+
+![](README_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+
+### Andrew Kinneer - Year Built
+
+For my variable I chose “YearBuilt”
+
+``` r
+range(ames$YearBuilt, na.rm = TRUE)
+```
+
+    ## [1]    0 2022
+
+The range of this variable is from 0 - 2022 Here is the distribution of
+YearBuilt. There are a few outliers at 0 which are removed in the chart
+
+``` r
+library(ggplot2)
+ggplot(ames, aes(x = YearBuilt)) +
+  geom_bar(binwidth = 10,color = "skyblue") +
+  labs(title = "Count of YearBuilt", x = "Year", y = "Count") +
+  xlim(1880, 2022)
+```
+
+    ## Warning in geom_bar(binwidth = 10, color = "skyblue"): Ignoring unknown
+    ## parameters: `binwidth`
+
+    ## Warning: Removed 448 rows containing non-finite values (`stat_count()`).
+
+    ## Warning: Removed 2 rows containing missing values (`geom_bar()`).
+
+![](README_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+
+Below you can see the comparison of YearBuilt to SalePrice. At first
+there seems to be no increase in SalePrice over the years. At around
+1960 there became a general increase in SalePrice with it peaking in the
+current year. This does not explain the previous oddities mentioned in
+\#3 with the zeros.
+
+``` r
+ggplot(ames, aes(x = YearBuilt, y = `Sale Price`)) +
+  geom_point(color = "blue", alpha = 0.7) +
+  labs(title = "Scatter Plot of YearBuilt vs Sale Price",
+       x = "Year Built",
+       y = "Sale Price") +
+  xlim(1880, 2022) +
+  ylim(1, 1500000)
+```
+
+    ## Warning: Removed 2903 rows containing missing values (`geom_point()`).
+
+![](README_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 Follow the instructions posted at
 <https://ds202-at-isu.github.io/labs.html> for the lab assignment. The
@@ -172,36 +281,3 @@ All submissions to the github repo will be automatically uploaded for
 grading once the due date is passed. Submit a link to your repository on
 Canvas (only one submission per team) to signal to the instructors that
 you are done with your submission.
-
-### Andrew Kinneer - Year Built
-For my variable I chose "YearBuilt"
-```{R}
-range(ames$YearBuilt, na.rm = TRUE)
-```
-The range of this variable is from 0 - 2022
-Here is the distribution of YearBuilt. There are a few outliers at 0 which are removed in the chart
-```{R}
-library(ggplot2)
-ggplot(ames, aes(x = YearBuilt)) +
-  geom_bar(binwidth = 10,color = "skyblue") +
-  labs(title = "Count of YearBuilt", x = "Year", y = "Count") +
-  xlim(1880, 2022)
-```
-
-Below you can see the comparison of YearBuilt to SalePrice. At first there seems to be no increase in SalePrice over the years. At around 1960 there became a general increase in SalePrice with it peaking in the current year. This does not explain the previous oddities mentioned in #3 with the zeros.
-
-```{R}
-ggplot(ames, aes(x = YearBuilt, y = `Sale Price`)) +
-  geom_point(color = "blue", alpha = 0.7) +
-  labs(title = "Scatter Plot of YearBuilt vs Sale Price",
-       x = "Year Built",
-       y = "Sale Price") +
-  xlim(1880, 2022) +
-  ylim(1, 1500000)
-```
-
-
-
-
-
-
