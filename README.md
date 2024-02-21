@@ -62,6 +62,10 @@ the property has a fireplace or not
 - Neighborhood: a factor variable, where the levels indicate
 neighborhood are in Ames
 
+## Question 2
+
+A variable that seems the most important is "sale Price". When drawing conclusions from this data, the most useful application I believe would be predicting prices of homes with this variable. So it makes sense for Sale Price to be our main variable.(Andrew)
+
 Follow the instructions posted at
 <https://ds202-at-isu.github.io/labs.html> for the lab assignment. The
 work is meant to be finished during the lab time, but you have time
