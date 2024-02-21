@@ -7,7 +7,7 @@
 =======
 # \<\<\<\<\<\<\< HEAD
 
->>>>>>> f0ed776e24ff50bdcd248d393dd8152cdcdc7c0e
+
 ## Question 1:
 
 ``` r
@@ -156,6 +156,7 @@ cost with a finished basement of 2000 as well. This also reflects the
 oddities found in question 3 as there are also many values in this
 scatter plot that indicate a finished basement in a house that sold for
 no cost.
+
 
 
 Follow the instructions posted at
