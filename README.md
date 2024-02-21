@@ -171,3 +171,32 @@ All submissions to the github repo will be automatically uploaded for
 grading once the due date is passed. Submit a link to your repository on
 Canvas (only one submission per team) to signal to the instructors that
 you are done with your submission.
+
+### Andrew Kinneer - Year Built
+For my variable I chose "YearBuilt"
+```{R}
+range(ames$YearBuilt, na.rm = TRUE)
+```
+The range of this variable is from 0 - 2022
+Here is the distribution of YearBuilt. There are a few outliers at 0 which are removed in the chart
+```{R}
+library(ggplot2)
+ggplot(ames, aes(x = YearBuilt)) +
+  geom_bar(binwidth = 10,color = "skyblue") +
+  labs(title = "Count of YearBuilt", x = "Year", y = "Count") +
+  xlim(1880, 2022)
+```
+
+Below you can see the comparison of YearBuilt to SalePrice. At first there seems to be no increase in SalePrice over the years. At around 1960 there became a general increase in SalePrice with it peaking in the current year. This does not explain the previous oddities mentioned in #3 with the zeros.
+
+```{R}
+ggplot(ames, aes(x = YearBuilt, y = `Sale Price`)) +
+  geom_point(color = "blue", alpha = 0.7) +
+  labs(title = "Scatter Plot of YearBuilt vs Sale Price",
+       x = "Year Built",
+       y = "Sale Price") +
+  xlim(1880, 2022) +
+  ylim(1, 1500000)
+```
+
+
