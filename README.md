@@ -106,7 +106,58 @@ ggplot(ames, aes( x=`Sale Price`)) + geom_histogram(binwidth = 10000000)
 
 ### Emily Maruska - Finished Basement Area
 
+<<<<<<< HEAD
 >>>>>>> f0ed776e24ff50bdcd248d393dd8152cdcdc7c0e
+=======
+``` r
+summary(ames$`FinishedBsmtArea (sf)`)
+```
+
+    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    ##    10.0   474.0   727.0   776.7  1011.0  6496.0    2682
+
+``` r
+ggplot(ames, aes(x = ames$`FinishedBsmtArea (sf)`)) + geom_histogram()
+```
+
+    ## Warning: Use of `` ames$`FinishedBsmtArea (sf)` `` is discouraged.
+    ## ℹ Use `FinishedBsmtArea (sf)` instead.
+
+    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+
+    ## Warning: Removed 2682 rows containing non-finite values (`stat_bin()`).
+
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- --> There is a
+distinct pattern in the histogram that shows that most of the houses
+that have a finished basement have a basement area that is roughly
+around 1000 square feet. There are, however, a few houses that have
+extremely large basements in comparison.
+
+``` r
+ggplot(ames, aes(x = ames$`FinishedBsmtArea (sf)`, y = ames$`Sale Price`)) + ylim(0, 1300000) + geom_point()
+```
+
+    ## Warning: Use of `` ames$`FinishedBsmtArea (sf)` `` is discouraged.
+    ## ℹ Use `FinishedBsmtArea (sf)` instead.
+
+    ## Warning: Use of `` ames$`Sale Price` `` is discouraged.
+    ## ℹ Use `Sale Price` instead.
+
+    ## Warning: Removed 2682 rows containing missing values (`geom_point()`).
+
+![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+
+In comparing the finished basement area to the sales price, there is a
+pretty clear pattern that generally the larger the finished basement,
+the larger the sales price is. There are a decent amount of outliers,
+such as houses that sold for very little cost but with a finished
+basement are of roughly 2000, or houses that sold for an extremely high
+cost with a finished basement of 2000 as well. This also reflects the
+oddities found in question 3 as there are also many values in this
+scatter plot that indicate a finished basement in a house that sold for
+no cost.
+
+>>>>>>> 209a01c03483a3781558c6e95be53a8ef56764ce
 Follow the instructions posted at
 <https://ds202-at-isu.github.io/labs.html> for the lab assignment. The
 work is meant to be finished during the lab time, but you have time
