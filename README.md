@@ -157,7 +157,7 @@ oddities found in question 3 as there are also many values in this
 scatter plot that indicate a finished basement in a house that sold for
 no cost.
 
->>>>>>> 209a01c03483a3781558c6e95be53a8ef56764ce
+
 Follow the instructions posted at
 <https://ds202-at-isu.github.io/labs.html> for the lab assignment. The
 work is meant to be finished during the lab time, but you have time

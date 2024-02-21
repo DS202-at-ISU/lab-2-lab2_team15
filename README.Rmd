@@ -109,6 +109,9 @@ ggplot(data = ames) + geom_point(mapping = aes(x = `LotArea(sf)`,
 
 
 
+
+
+
 <<<<<<< HEAD
 =======
 
